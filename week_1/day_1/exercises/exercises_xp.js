@@ -2,50 +2,50 @@ const prompt = require("prompt-sync")();
 
 //? Exercise 1 : List of people
 // Part I - Review about arrays
-//! ===== Exercise 1
+//! ===== Ex 1
 const people = ["Greg", "Mary", "Devon", "James"];
 
 //* Write code to remove “Greg” from the people array.
 people.splice(0, 1);
 // console.log("Remove Greg from the people array:", people);
 
-//! ===== Exercise 2
+//! ===== Ex 2
 //* Write code to replace “James” to “Jason”.
 people.splice(2, 1, "Jason");
 // console.log('Replace "James" with "Jason":', people);
 
-//! ===== Exercise 3
+//! ===== Ex 3
 //* Write code to add your name to the end of the people array.
 people.push("Abdessamad");
 // console.log("Add your name to the end of the people array:", people);
 
-//! ===== Exercise 4
+//! ===== Ex 4
 //* Write code that console.logs Mary’s index.
 // console.log("Mary's index:", people.indexOf("Mary"));
 
-//! ===== Exercise 5
+//! ===== Ex 5
 //* Write code to make a copy of the people array using the slice method.
 //* The copy should NOT include “Mary” or your name.
 const peopleCopy = people.slice(1, people.length - 1);
 // console.log("Copy of the people array without Mary and my name:", peopleCopy);
 
-//! ===== Exercise 6
+//! ===== Ex 6
 //* Write code that gives the index of “Foo”. Why does it return -1 ?
 // console.log('Index of "Foo":', people.indexOf("Foo")); /// It returns -1 because "Foo" is not in the array.
 
-//! ===== Exercise 7
+//! ===== Ex 7
 //* Create a variable called last which value is the last element of the array.
 const last = people[people.length - 1];
 // console.log("Last element of the people array:", last);
 
 // Part II - Loops
-//! ===== Exercise 1
+//! ===== Ex 1
 //* Using a loop, iterate through the people array and console.log each person.
 for (let i = 0; i < people.length; i++) {
   //   console.log(people[i]);
 }
 
-//! ===== Exercise 2
+//! ===== Ex 2
 //* Using a loop, iterate through the people array and exit the loop after console.log “Jason” .
 for (let i = 0; i < people.length; i++) {
   //   console.log(people[i]);
@@ -55,18 +55,18 @@ for (let i = 0; i < people.length; i++) {
 }
 
 //? Exercise 2 : Your favorite colors
-//! ===== Exercise 1
+//! ===== Ex 1
 //* Create an array called colors where the value is a list of your favorite colors.
 const colors = ["Blue", "Black", "Grey"];
 
-//! ===== Exercise 2
+//! ===== Ex 2
 //* Using a loop, iterate through the colors array and console.log each color.
 for (let i = 0; i < colors.length; i++) {
   //   console.log(`My #${i + 1} favorite color is: ${colors[i]}`);
 }
 
 //? Exercise 3 : Repeat The Question
-//! ===== Exercise 1
+//! ===== Ex 1
 //* Prompt the user for a number.
 //* While the number is smaller than 10 continue asking the user for a new number.
 // let userNumber = parseInt(prompt("Please enter a number: "));
@@ -119,7 +119,7 @@ if (sarahRent + davidRent > danRent) {
 }
 
 //? Exercise 5 : Family
-//! ===== Exercise 1
+//! ===== Ex 1
 //* Create an object called family with a few key value pairs.
 const family = {
   father: "Ahmed",
@@ -140,7 +140,7 @@ const details = {
   the: "raindeer",
 };
 
-//! ===== Exercise 1
+//! ===== Ex 1
 //* Console.log “my name is Rudolf the raindeer” .
 let sentence = "";
 for (let key in details) {
@@ -152,7 +152,7 @@ for (let key in details) {
 //? Exercise 7 : Secret Group
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
 names.sort();
-//! ===== Exercise 1
+//! ===== Ex 1
 //* Create a secret society name using the first letter of each person’s name
 //* in the names array.
 //* Console.log the name of the secret society.
