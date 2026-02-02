@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      div.read {
+        color: red;
+      }
+
+      div img {
+        width: 100px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="listBooks"></section>
+
+    <script>
+      const allBooks = [
+        {
+          title: "The Design of Everyday Things",
+          author: "Don Norman",
+          image: "https://picsum.photos/200/300?random=1",
+          alreadyRead: false,
+        },
+        {
+          title: "The Most Human Human",
+          author: "Brian Christian",
+          image: "https://picsum.photos/200/300?random=2",
+          alreadyRead: true,
+        },
+      ];
+
+      for (let i = 0; i < allBooks.length; i++) {
+        const book = allBooks[i];
+        const div = document.createElement("div");
+        div.textContent = `${book.title} written by ${book.author}`;
+
+        const img = document.createElement("img");
+        img.src = book.image;
+        div.appendChild(img);
+
+        if (book.alreadyRead) {
+          div.classList.add("read");
+        }
+
+        document.querySelector(".listBooks").appendChild(div);
+      }
+    </script>
+  </body>
+</html>

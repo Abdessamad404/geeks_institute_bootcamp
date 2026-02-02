@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">Users:</div>
+    <ul class="list">
+      <li>John</li>
+      <li>Pete</li>
+    </ul>
+    <ul class="list">
+      <li>David</li>
+      <li>Sarah</li>
+      <li>Dan</li>
+    </ul>
+    <script>
+      // Retrieve the div and console.log it
+      const containerDiv = document.getElementById("container");
+      console.log(containerDiv);
+
+      // Change the name “Pete” to “Richard”.
+      const peteLi = document.querySelector(".list li:nth-child(2)");
+      peteLi.textContent = "Richard";
+
+      // Delete the second <li> of the second <ul>.
+      const secondUlSecondLi = document
+        .querySelectorAll(".list")[1]
+        .querySelector("li:nth-child(2)");
+      secondUlSecondLi.remove();
+
+      // Change the name of the first <li> of each <ul> to your name. use a loop
+      const firstLis = document.querySelectorAll(".list li:first-child");
+      for (let i = 0; i < firstLis.length; i++) {
+        firstLis[i].textContent = "Abdessamad";
+      }
+
+      // Add a class called student_list to both of the <ul>'s.
+      const uls = document.querySelectorAll(".list");
+      for (let i = 0; i < uls.length; i++) {
+        uls[i].classList.add("student_list");
+      }
+
+      // Add the classes university and attendance to the first <ul>.
+      uls[0].classList.add("university", "attendance");
+
+      //   Add a “light blue” background color and some padding to the <div>.
+      const containerDiv2 = document.getElementById("container");
+      containerDiv2.style.backgroundColor = "lightblue";
+      containerDiv2.style.padding = "10px";
+
+      // Do not display the <li> that contains the text node “Dan”. (the last <li> of the first <ul>)
+      const danLi = document.querySelectorAll(".list li")[4];
+      danLi.style.display = "none";
+
+      // Add a border to the <li> that contains the text node “Richard”. (the second <li> of the <ul>) as if you don't know its position.
+      const lis = document.querySelectorAll(".list li");
+      for (let i = 0; i < lis.length; i++) {
+        if (lis[i].textContent === "Richard") {
+          lis[i].style.border = "1px solid black";
+          break;
+        }
+      }
+
+      // Change the font size of the whole body.
+      document.body.style.fontSize = "20px";
+    </script>
+  </body>
+</html>
