@@ -99,26 +99,34 @@ button.addEventListener("click", event => {
 var allBoldItems;
 
 function getBoldItems() {
-    allBoldItems = document.querySelectorAll("strong");
-    console.log(allBoldItems);
+  allBoldItems = document.querySelectorAll("strong");
 }
 getBoldItems();
 
 function highlight() {
-    for (let i = 0; i < allBoldItems.length; i++) {
-        allBoldItems[i].style.color = "blue";
-    }
+  for (let i = 0; i < allBoldItems.length; i++) {
+    allBoldItems[i].style.color = "blue";
+  }
 }
 highlight();
 
 function returnItemsToDefault() {
-    for (let i = 0; i < allBoldItems.length; i++) {
-        allBoldItems[i].style.color = "black";
-    }
+  for (let i = 0; i < allBoldItems.length; i++) {
+    allBoldItems[i].style.color = "black";
+  }
 }
 returnItemsToDefault();
 
-// Call the function highlight() on mouseover (ie. when the mouse pointer is moved onto the paragraph), and the function returnItemsToDefault() on mouseout (ie. when the mouse pointer is moved out of the paragraph). 
+// Call the function highlight() on mouseover (ie. when the mouse pointer is moved onto the paragraph), and the function returnItemsToDefault() on mouseout (ie. when the mouse pointer is moved out of the paragraph).
 const paragraph = document.querySelector("p");
 paragraph.addEventListener("mouseover", highlight);
 paragraph.addEventListener("mouseout", returnItemsToDefault);
+
+//!🌟 Exercise 4 : Volume Of A Sphere
+const myForm = document.querySelector("#MyForm");
+myForm.addEventListener("submit", event => {
+  event.preventDefault();
+  const radius = document.querySelector("#radius").value;
+  const volume = (4 / 3) * Math.PI * radius ** 3;
+  document.querySelector("#volume").value = volume;
+});
