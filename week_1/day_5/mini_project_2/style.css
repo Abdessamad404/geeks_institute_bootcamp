@@ -5,11 +5,18 @@
 }
 
 body {
-  background: #1a1a1a;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url("images/crowd-stage.jpg");
+  background-size: cover; /* fill the screen */
+  background-position: center bottom; /* focus on the crowd + stage */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* optional: nice parallax feel */
 }
 
 .drumset {
@@ -19,8 +26,8 @@ body {
 }
 
 .pad {
-  background: #2a2a2a;
-  border: 2px solid #444;
+  background: transparent;
+  border: 2px solid #fff;
   border-radius: 8px;
   width: 120px;
   height: 120px;
@@ -34,7 +41,7 @@ body {
 }
 
 .pad.active {
-  background: #e0a800;
+  background: rgba(224, 168, 0, 0.3);
   border-color: #e0a800;
 }
 
