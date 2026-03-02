@@ -1,4 +1,4 @@
-const prompt = require("prompt-sync")();
+// const prompt = require("prompt-sync")();
 
 //? Instructions
 //? Analyse the code below, and predict what will be the value of a in all the following functions.
@@ -21,7 +21,7 @@ function funcTwo() {
 }
 
 function funcThree() {
-  console.log(`inside the funcThree function ${a}`);
+  alert(`inside the funcThree function ${a}`);
 }
 
 // #2.1 - run in the console:
@@ -36,9 +36,30 @@ function funcFour() {
   window.a = "hello";
 }
 function funcFive() {
-    alert(`inside the funcFive function ${a}`);
+  alert(`inside the funcFive function ${a}`);
 }
 
 // #3.1 - run in the console:
-funcFour()
-funcFive()
+funcFour();
+funcFive();
+
+//#4
+let a = 1;
+function funcSix() {
+  let a = "test";
+  alert(`inside the funcSix function ${a}`);
+}
+
+// #4.1 - run in the console:
+funcSix(); //* outputs inside the funcSix function test
+
+//#5
+let a = 2;
+if (true) {
+  let a = 5;
+  alert(`in the if block ${a}`);
+}
+alert(`outside of the if block ${a}`);
+
+//* 1st alert: "in the if block 5" (inner 'a' scoped to the block)
+//* 2nd alert: "outside of the if block 2" (outer 'a' unchanged)
