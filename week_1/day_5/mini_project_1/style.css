@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+#clear-button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  background: none;
+  border: 1px solid #999;
+  cursor: pointer;
+}
+
+.sidebar-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.sidebar-item {
+  aspect-ratio: 2/3;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.main {
+  flex: 4;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+}
+
+.main-item {
+  aspect-ratio: 1;
+  border: 1px solid #ccc;
+  background-color: white;
+}
