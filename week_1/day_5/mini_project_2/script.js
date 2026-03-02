@@ -1,6 +1,7 @@
-function playSound(keyCode) {
-  const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
-  const pad = document.querySelector(`.pad[data-key="${keyCode}"]`);
+function playSound(keyValue) {
+  const key = String(keyValue).toLowerCase();
+  const audio = document.querySelector(`audio[data-key="${key}"]`);
+  const pad = document.querySelector(`.pad[data-key="${key}"]`);
 
   if (!audio) return;
 
@@ -13,7 +14,7 @@ function playSound(keyCode) {
 
 // Keyboard events
 document.addEventListener("keydown", (e) => {
-  playSound(e.keyCode);
+  playSound(e.key);
 });
 
 // Mouse click events
