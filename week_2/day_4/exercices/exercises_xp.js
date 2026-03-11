@@ -36,13 +36,13 @@ const marioGame = {
 
 // #1 - Convert JS object to JSON string
 const marioJSON = JSON.stringify(marioGame);
-// // console.log("Mario JSON:", marioJSON);
+console.log("Mario JSON:", marioJSON);
 // Nested objects are preserved — JSON supports any depth of nesting.
 // All keys become quoted strings, values keep their types (string, number).
 
 // #2 - Pretty print JSON (indented with 2 spaces)
 const marioPrettyJSON = JSON.stringify(marioGame, null, 2);
-// // console.log("Mario Pretty JSON:", marioPrettyJSON);
+console.log("Mario Pretty JSON:", marioPrettyJSON);
 // The second argument (null) means no key filtering.
 // The third argument (2) sets the indentation level for readability.
 
