@@ -25,3 +25,17 @@ const promise = new Promise(resolve => {
 });
 
 promise.then(msg => console.log(msg));
+
+//! ===== Exercise 3 : Resolve & Reject =====
+
+const resolveAfter3Seconds = new Promise(resolve => {
+  setTimeout(() => resolve("resolved"), 3000);
+});
+
+resolveAfter3Seconds.then(msg => console.log(msg));
+
+//! ===== Exercise 4 : Promise.all =====
+
+const promise1 = new Promise(resolve => {
+  setTimeout(() => resolve("Promise 1 resolved"), 2000);
+});
