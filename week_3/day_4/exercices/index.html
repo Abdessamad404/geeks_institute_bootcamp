@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XP Exercises</title>
+  </head>
+  <body>
+    <h2>Exercise 1 : GET Form</h2>
+    <!--
+      GET method: data is appended to the URL as query parameters.
+      Example: index.html?name=John&message=Hello
+      You will see the data directly in the browser's address bar.
+    -->
+    <form action="index.html#getForm" method="GET" id="getForm">
+      <input type="text" name="name" placeholder="Your name" />
+      <br />
+      <textarea
+        name="message"
+        cols="30"
+        rows="10"
+        placeholder="Your message"
+      ></textarea>
+      <br />
+      <input type="submit" value="Send" />
+    </form>
+
+    <hr />
+
+    <h2>Exercise 2 : POST Form</h2>
+    <!--
+      POST method: data is sent in the request body, NOT visible in the URL.
+      To see the sent data, open DevTools > Network tab > click the request > Payload.
+    -->
+    <form action="index.html" method="POST" id="postForm">
+      <input type="text" name="name" placeholder="Your name" />
+      <br />
+      <textarea
+        name="message"
+        cols="30"
+        rows="10"
+        placeholder="Your message"
+      ></textarea>
+      <br />
+      <input type="submit" value="Send" />
+    </form>
+
+    <script src="./exercises_xp.js"></script>
+  </body>
+</html>
