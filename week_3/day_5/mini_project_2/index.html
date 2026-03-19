@@ -2,45 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic Tac Toe</title>
+    <title>Pokedex</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="app">
-      <h1>Tic Tac Toe</h1>
-
-      <div id="symbolPicker">
-        <p>Choose your symbol:</p>
-        <button onclick="chooseSymbol('X')">X</button>
-        <button onclick="chooseSymbol('O')">O</button>
+    <div class="app">
+      <div class="logo-container">
+        <img src="logo.png" alt="Pokemon Logo" class="logo-img" />
       </div>
-
-      <div id="difficultyPicker" class="hidden">
-        <p>Choose difficulty:</p>
-        <button onclick="chooseDifficulty('easy')">Easy</button>
-        <button onclick="chooseDifficulty('hard')">Hard</button>
+      <div class="content-wrapper">
+        <div class="pokedex">
+          <img src="pokedex.png" alt="Pokedex" class="pokedex-img" />
+          <div class="top-screen">
+            <img id="pokemon-image" src="" alt="Pokemon" />
+          </div>
+          <div class="bottom-info">
+            <h2 id="pokemon-name">Press random</h2>
+            <p id="pokemon-id"></p>
+            <p id="pokemon-height"></p>
+            <p id="pokemon-weight"></p>
+            <p id="pokemon-type"></p>
+            <p id="message"></p>
+          </div>
+          <button id="prev-btn" class="btn prev"></button>
+          <button id="random-btn" class="btn random"></button>
+          <button id="next-btn" class="btn next"></button>
+        </div>
+        <div class="instructions">
+          <h3>How to use:</h3>
+          <p>
+            1- Press the <strong>green</strong> button to get a random Pokémon
+          </p>
+          <p>
+            2- Press the <strong>left</strong> and
+            <strong>right</strong> buttons to see previous and next Pokémon.
+          </p>
+        </div>
       </div>
-
-      <p id="status" class="hidden"></p>
-
-      <div id="board" class="hidden">
-        <div class="cell" id="cell-0" onclick="playerMove(0)"></div>
-        <div class="cell" id="cell-1" onclick="playerMove(1)"></div>
-        <div class="cell" id="cell-2" onclick="playerMove(2)"></div>
-        <div class="cell" id="cell-3" onclick="playerMove(3)"></div>
-        <div class="cell" id="cell-4" onclick="playerMove(4)"></div>
-        <div class="cell" id="cell-5" onclick="playerMove(5)"></div>
-        <div class="cell" id="cell-6" onclick="playerMove(6)"></div>
-        <div class="cell" id="cell-7" onclick="playerMove(7)"></div>
-        <div class="cell" id="cell-8" onclick="playerMove(8)"></div>
-      </div>
-
-      <button id="restartBtn" class="hidden" onclick="restartGame()">
-        Play Again
-      </button>
     </div>
-
-    <script src="app.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
