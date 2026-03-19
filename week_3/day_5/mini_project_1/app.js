@@ -61,7 +61,7 @@ function showError() {
   box.innerHTML = `
     <div class="state state-error">
       <i class="fa-solid fa-triangle-exclamation fa-lg"></i>
-      ERROR — COULD NOT RETRIEVE DATA
+      OH NO! THAT PERSON ISN'T AVAILABLE. 
     </div>
   `;
 }
