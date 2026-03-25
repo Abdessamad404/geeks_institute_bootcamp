@@ -15,7 +15,7 @@ async function fetchGiphy1() {
   }
 }
 
-// // fetchGiphy1();
+fetchGiphy1();
 
 //! ===== Exercise 2 : Giphy API =====
 
@@ -34,7 +34,7 @@ async function fetchGiphy2() {
   }
 }
 
-// // fetchGiphy2();
+fetchGiphy2();
 
 //! ===== Exercise 3 : Async function =====
 
@@ -53,7 +53,7 @@ async function fetchStarship() {
   }
 }
 
-// // fetchStarship();
+fetchStarship();
 
 //! ==== Exercise 4: Analyze ====
 //? Analyze the code below. What will be the output?
@@ -72,3 +72,5 @@ async function asyncCall() {
 }
 
 asyncCall();
+
+//* The console.log("calling") runs immediately. Then await pauses execution until the promise resolves after 2 seconds, then console.log(result) outputs "resolved".
