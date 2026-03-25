@@ -15,7 +15,7 @@ async function fetchGiphy1() {
   }
 }
 
-fetchGiphy1();
+// // fetchGiphy1();
 
 //! ===== Exercise 2 : Giphy API =====
 
@@ -34,7 +34,41 @@ async function fetchGiphy2() {
   }
 }
 
-fetchGiphy2();
+// // fetchGiphy2();
 
 //! ===== Exercise 3 : Async function =====
 
+async function fetchStarship() {
+  const url = "https://www.swapi.tech/api/starships/9/";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const objectStarWars = await response.json();
+    console.log(objectStarWars.result);
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
+}
+
+// // fetchStarship();
+
+//! ==== Exercise 4: Analyze ====
+//? Analyze the code below. What will be the output?
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve("resolved");
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log("calling");
+  let result = await resolveAfter2Seconds();
+  console.log(result);
+}
+
+asyncCall();
