@@ -18,9 +18,6 @@ async function fetchGiphy1() {
 fetchGiphy1();
 
 //! ===== Exercise 2 : Giphy API =====
-// Use the Fetch API to retrieve 10 gifs about the “sun”. The starting position of the results should be 2.
-// Make sure to check the status of the Response and to catch any occuring errors.
-// use limit and offset params
 
 async function fetchGiphy2() {
   const url = `https://api.giphy.com/v1/gifs/search?q=sun&rating=g&limit=10&offset=2&api_key=${apiKey}`;
@@ -41,10 +38,3 @@ fetchGiphy2();
 
 //! ===== Exercise 3 : Async function =====
 
-async function asyncFunc() {
-  console.log("Start");
-  await new Promise(resolve => setTimeout(resolve, 2000));
-  console.log("End");
-}
-
-asyncFunc();
