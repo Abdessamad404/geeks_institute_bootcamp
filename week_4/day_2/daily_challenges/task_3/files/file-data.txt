@@ -1,0 +1,1 @@
+Hello, this is a sample text file used for testing the call of file-data.txt script.
